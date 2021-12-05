@@ -10,21 +10,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Maria</td>
-        <td>Maria01</td>
-        <td>1234</td>
-        <td>Reservar</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Juan</td>
-        <td>Juan02</td>
-        <td>5678</td>
-        <td>Administrar</td>
-        <td>0</td>
+      <tr *ngFor="let administrador of lista">
+        <th scope="row">{{ administrador.id }}</th>
+        <td>{{ administrador.nombre }}</td>
+        <td>{{ administrador.usuario}}</td>
+        <td>{{ administrador.contrasena }}</td>
+        <td>{{ administrador.tarea }}</td>
+        <td>{{ administrador.estado }}</td>
       </tr>
     </tbody>
   </table>

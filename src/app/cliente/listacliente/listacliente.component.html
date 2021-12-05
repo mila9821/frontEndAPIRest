@@ -12,25 +12,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Alejandra</td>
-        <td>Activo</td>
-        <td>985412630</td>
-        <td>Alejandra25@gmail.com</td>
-        <td>Argentina</td>
-        <td>75412036</td>
-        <td>foto</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Carla</td>
-        <td>Activo</td>
-        <td>974521036</td>
-        <td>Carla5@gmail.com</td>
-        <td>Bolivia</td>
-        <td>79654172</td>
-        <td>foto</td>
+      <tr *ngFor="let cliente of lista">
+        <th scope="row">{{ cliente.id }}</th>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.modo }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>{{ cliente.email }}</td>
+        <td>{{ cliente.pais }}</td>
+        <td>{{ cliente.dni }}</td>
+        <td>{{ cliente.foto }}</td>
       </tr>
     </tbody>
   </table>

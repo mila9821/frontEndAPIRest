@@ -10,21 +10,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>2021-12-08</td>
-        <td>2021-12-16</td>
-        <td>50</td>
-        <td>20</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>2021-10-15</td>
-        <td>2021-10-18</td>
-        <td>65</td>
-        <td>25</td>
-        <td>3</td>
+      <tr *ngFor="let reserva of lista">
+        <th scope="row">{{ reserva.id }}</th>
+        <td>{{ reserva.ingreso }}</td>
+        <td>{{ reserva.salida }}</td>
+        <td>{{ reserva.precio }}</td>
+        <td>{{ reserva.adelanto }}</td>
+        <td>{{ reserva.dias }}</td>
       </tr>
     </tbody>
   </table>

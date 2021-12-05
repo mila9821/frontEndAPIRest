@@ -15,4 +15,9 @@ export class ListaadministradorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get lista() {
+    
+    return this.administradorService.lista;
+  }
+
 }

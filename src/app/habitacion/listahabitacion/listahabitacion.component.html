@@ -10,21 +10,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>503</td>
-        <td>Ocupado</td>
-        <td>Matrimonial</td>
-        <td>70</td>
-        <td>Cama matrimonial, ducha caliente, cable</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>506</td>
-        <td>Ocupado</td>
-        <td>SImple</td>
-        <td>30</td>
-        <td>Una cama, desayuno, Wifi</td>
+      <tr *ngFor="let habitacion of lista">
+        <th scope="row">{{ habitacion.id }}</th>
+        <td>{{ habitacion.nombre }}</td>
+        <td>{{ habitacion.estado }}</td>
+        <td>{{ habitacion.tipo }}</td>
+        <td>{{ habitacion.precio }}</td>
+        <td>{{ habitacion.descripcion }}</td>
       </tr>
     </tbody>
   </table>

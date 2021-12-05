@@ -8,17 +8,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Huevo frito</td>
-        <td>18</td>
-        <td>foto</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Lomo Saltado</td>
-        <td>25</td>
-        <td>foto</td>
+      <tr *ngFor="let restaurante of lista">
+        <th scope="row">{{ restaurante.id }}</th>
+        <td>{{ restaurante.nomPlato }}</td>
+        <td>{{ restaurante.precioPlato }}</td>
+        <td>{{ restaurante.foto }}</td>
       </tr>
     </tbody>
   </table>

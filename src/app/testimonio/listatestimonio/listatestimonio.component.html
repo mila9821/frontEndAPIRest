@@ -7,15 +7,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Buena atencion</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Mala atencion</td>
-        <td>1</td>
+      <tr *ngFor="let testimonio of lista">
+        <th scope="row">{{ testimonio.id }}</th>
+        <td>{{ testimonio.contenido }}</td>
+        <td>{{ testimonio.estado }}</td>
       </tr>
     </tbody>
   </table>
