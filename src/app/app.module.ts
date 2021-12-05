@@ -10,6 +10,7 @@ import { HabitacionModule } from './habitacion/habitacion.module';
 import { ReservaModule } from './reserva/reserva.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
 import { TestimonioModule } from './testimonio/testimonio.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TestimonioModule } from './testimonio/testimonio.module';
     HabitacionModule,
     ReservaModule,
     RestauranteModule,
-    TestimonioModule
+    TestimonioModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
