@@ -1,0 +1,23 @@
+<h3>Nuevo Administrador</h3>
+<div class="mb-3">
+    <label for="NombreInput" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="NombreInput" placeholder="Nombre" #inputNombre>
+  </div>
+<div class="mb-3">
+    <label for="UsuarioInput" class="form-label">Usuario</label>
+    <input type="text" class="form-control" id="UsuarioInput" #inputUsuario>
+  </div>
+<div class="mb-3">
+    <label for="ContrasenaInput" class="form-label">Contrasena</label>
+    <input type="password" class="form-control" id="ContrasenaInput" #inputContrasena>
+  </div>
+<div class="mb-3">
+    <label for="TareaInput" class="form-label">Tarea</label>
+    <input type="text" class="form-control" id="TareaInput" #inputTarea>
+  </div>
+<div class="mb-3">
+    <label for="EstadoInput" class="form-label">Estado</label>
+    <input type="text" class="form-control" id="EstadoInput" #inputEstado>
+  </div>
+  <hr>
+  <a href="administrador" class="btn btn-warning btn-lg" tabindex="-1" role="button" (click)="crearAdmi(inputNombre.value, inputUsuario.value, inputContrasena.value, inputTarea.value, inputEstado.valueAsNumber)" >Aceptar</a>

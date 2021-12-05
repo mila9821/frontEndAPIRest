@@ -1,0 +1,31 @@
+<h3>Nuevo Cliente</h3>
+<div class="mb-3">
+    <label for="NombreInput" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="NombreInput" placeholder="Nombre" [value]="nuevoCliente.nombre">
+  </div>
+<div class="mb-3">
+    <label for="ModoInput" class="form-label">Modo</label>
+    <input type="text" class="form-control" id="ModoInput" [value]="nuevoCliente.modo">
+  </div>
+<div class="mb-3">
+    <label for="TelefonoInput" class="form-label">Telefono</label>
+    <input type="text" class="form-control" id="TelefonoInput" [value]="nuevoCliente.telefono">
+  </div>
+<div class="mb-3">
+    <label for="EmailInput" class="form-label">Email</label>
+    <input type="email" class="form-control" id="EmailInput" [value]="nuevoCliente.email">
+  </div>
+<div class="mb-3">
+    <label for="PaisInput" class="form-label">Pais</label>
+    <input type="text" class="form-control" id="PaisInput" [value]="nuevoCliente.pais">
+  </div>
+<div class="mb-3">
+    <label for="DNIInput" class="form-label">DNI</label>
+    <input type="text" class="form-control" id="DNIInput" [value]="nuevoCliente.dni">
+  </div>
+  <div class="mb-3">
+    <label for="FotoInput" class="form-label">Foto</label>
+    <input type="hidden" class="form-control" id="FotoInput" [value]="nuevoCliente.foto">
+  </div>
+  <hr>
+  <a href="cliente" class="btn btn-warning btn-lg" tabindex="-1" role="button" >Aceptar</a>

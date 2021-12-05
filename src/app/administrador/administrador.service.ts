@@ -16,4 +16,8 @@ export class AdministradorService {
       this.lista = resp
     });
   }
+
+  agregarAdministrador(administrador:Administrador) {
+    this.http.post<any>('http://127.0.0.1:8080/api/administradores', administrador).subscribe();
+  }
 }

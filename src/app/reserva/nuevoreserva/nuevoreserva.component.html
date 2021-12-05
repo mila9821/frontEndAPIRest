@@ -1,0 +1,23 @@
+<h3>Nueva Reserva</h3>
+<div class="mb-3">
+    <label for="IngresoInput" class="form-label">Ingreso</label>
+    <input type="date" class="form-control" id="IngresoInput" [value]="nuevoReserva.ingreso">
+  </div>
+<div class="mb-3">
+    <label for="SalidaInput" class="form-label">Salida</label>
+    <input type="date" class="form-control" id="SalidaInput" [value]="nuevoReserva.salida">
+  </div>
+<div class="mb-3">
+    <label for="PrecioInput" class="form-label">Precio</label>
+    <input type="text" class="form-control" id="PrecioInput" [value]="nuevoReserva.precio">
+  </div>
+<div class="mb-3">
+    <label for="AdelantoInput" class="form-label">Adelanto</label>
+    <input type="text" class="form-control" id="AdelantoInput" [value]="nuevoReserva.adelanto">
+  </div>
+<div class="mb-3">
+    <label for="DiasInput" class="form-label">Dias</label>
+    <input type="text" class="form-control" id="DiasInput" [value]="nuevoReserva.dias">
+  </div>
+  <hr>
+  <a href="reserva" class="btn btn-warning btn-lg" tabindex="-1" role="button" >Aceptar</a>

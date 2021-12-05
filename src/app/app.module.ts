@@ -11,6 +11,7 @@ import { ReservaModule } from './reserva/reserva.module';
 import { RestauranteModule } from './restaurante/restaurante.module';
 import { TestimonioModule } from './testimonio/testimonio.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReservaModule,
     RestauranteModule,
     TestimonioModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

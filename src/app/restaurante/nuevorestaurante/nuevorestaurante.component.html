@@ -1,0 +1,16 @@
+<h3>Nuevo Plato</h3>
+<div class="mb-3">
+    <label for="NombreInput" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="NombreInput" [value]="nuevoRestaurante.nomPlato">
+  </div>
+<div class="mb-3">
+    <label for="PrecioInput" class="form-label">Precio</label>
+    <input type="text" class="form-control" id="PrecioInput" [value]="nuevoRestaurante.precioPlato">
+  </div>
+<div class="mb-3">
+    <label for="FotoInput" class="form-label">Foto</label>
+    <input type="hidden" class="form-control" id="FotoInput" [value]="nuevoRestaurante.foto">
+    </div>
+    <hr>
+  <a href="restaurante" class="btn btn-warning btn-lg" tabindex="-1" role="button" >Aceptar</a>
+
