@@ -1,23 +1,23 @@
 <h3>Nueva Reserva</h3>
 <div class="mb-3">
     <label for="IngresoInput" class="form-label">Ingreso</label>
-    <input type="date" class="form-control" id="IngresoInput" [value]="nuevoReserva.ingreso">
+    <input type="date" class="form-control" id="IngresoInput" #inputIngreso>
   </div>
 <div class="mb-3">
     <label for="SalidaInput" class="form-label">Salida</label>
-    <input type="date" class="form-control" id="SalidaInput" [value]="nuevoReserva.salida">
+    <input type="date" class="form-control" id="SalidaInput" #inputSalida>
   </div>
 <div class="mb-3">
     <label for="PrecioInput" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="PrecioInput" [value]="nuevoReserva.precio">
+    <input type="text" class="form-control" id="PrecioInput" #inputPrecio>
   </div>
 <div class="mb-3">
     <label for="AdelantoInput" class="form-label">Adelanto</label>
-    <input type="text" class="form-control" id="AdelantoInput" [value]="nuevoReserva.adelanto">
+    <input type="text" class="form-control" id="AdelantoInput" #inputAdelanto>
   </div>
 <div class="mb-3">
     <label for="DiasInput" class="form-label">Dias</label>
-    <input type="text" class="form-control" id="DiasInput" [value]="nuevoReserva.dias">
+    <input type="text" class="form-control" id="DiasInput" #inputDias>
   </div>
   <hr>
-  <a href="reserva" class="btn btn-warning btn-lg" tabindex="-1" role="button" >Aceptar</a>
+  <a href="reserva" class="btn btn-warning btn-lg" tabindex="-1" role="button">Aceptar</a>

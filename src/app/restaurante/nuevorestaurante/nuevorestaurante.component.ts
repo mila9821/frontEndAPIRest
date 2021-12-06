@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Restaurante } from '../../Interfaces/restaurante.interface';
+import { RestauranteService } from '../restaurante.service';
 
 @Component({
   selector: 'app-nuevorestaurante',
@@ -8,16 +9,21 @@ import { Restaurante } from '../../Interfaces/restaurante.interface';
 })
 export class NuevorestauranteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private restauranteService: RestauranteService) { }
 
   ngOnInit(): void {
   }
 
-  public nuevoRestaurante: Restaurante = {
-    id:0,
-    nomPlato: "",
-    precioPlato: 0,
-    foto: ""
-  } 
+ 
+
+  crearPlato(inputNombre: string, inputPrecio: number, inputFoto: string){
+    const nuevoRestaurante: Restaurante = {
+      id:0,
+      nomPlato: inputNombre,
+      precioPlato: inputPrecio,
+      foto: inputFoto
+    };
+    this.restauranteService.agregarRestaurante(nuevoRestaurante);
+  }
 
 }

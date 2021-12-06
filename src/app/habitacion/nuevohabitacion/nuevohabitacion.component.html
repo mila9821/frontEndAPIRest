@@ -1,23 +1,23 @@
 <h3>Nueva Habitacion</h3>
 <div class="mb-3">
     <label for="NombreInput" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="NombreInput" placeholder="Nombre" [value]="nuevoHabitacion.nombre">
+    <input type="text" class="form-control" id="NombreInput" placeholder="Nombre" #inputNombre>
   </div>
 <div class="mb-3">
     <label for="EstadoInput" class="form-label">Estado</label>
-    <input type="text" class="form-control" id="EstadoInput" [value]="nuevoHabitacion.estado">
+    <input type="text" class="form-control" id="EstadoInput" #inputEstado>
   </div>
 <div class="mb-3">
     <label for="TipoInput" class="form-label">Tipo</label>
-    <input type="text" class="form-control" id="TipoInput" [value]="nuevoHabitacion.tipo">
+    <input type="text" class="form-control" id="TipoInput" #inputTipo>
   </div>
 <div class="mb-3">
     <label for="PrecioInput" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="PrecioInput" [value]="nuevoHabitacion.precio">
+    <input type="number" class="form-control" id="PrecioInput" #inputPrecio>
   </div>
 <div class="mb-3">
     <label for="DescripcionInput" class="form-label">Descripcion</label>
-    <input type="text" class="form-control" id="DescripcionInput" [value]="nuevoHabitacion.descripcion">
+    <input type="text" class="form-control" id="DescripcionInput" #inputDescripcion>
   </div>
   <hr>
-  <a href="habitacion" class="btn btn-warning btn-lg" tabindex="-1" role="button" >Aceptar</a>
+  <a href="habitacion" class="btn btn-warning btn-lg" tabindex="-1" role="button" (click)="crearHabitacion(inputNombre.value, inputEstado.value, inputTipo.value, inputPrecio.valueAsNumber, inputDescripcion.value)">Aceptar</a>

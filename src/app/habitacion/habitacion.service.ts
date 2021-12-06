@@ -17,4 +17,8 @@ export class HabitacionService {
       this.lista = resp
     });
   }
+
+  agregarHabitacion(habitacion:Habitacion) {
+    this.http.post<any>('http://127.0.0.1:8080/api/habitacion', habitacion).subscribe();
+  }
 }

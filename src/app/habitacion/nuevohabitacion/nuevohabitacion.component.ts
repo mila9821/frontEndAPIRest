@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Habitacion } from '../../Interfaces/habitacion.interface';
+import { HabitacionService } from '../habitacion.service';
 
 @Component({
   selector: 'app-nuevohabitacion',
@@ -8,19 +9,25 @@ import { Habitacion } from '../../Interfaces/habitacion.interface';
 })
 export class NuevohabitacionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private habitacionService: HabitacionService) { }
 
   ngOnInit(): void {
   }
 
-  public nuevoHabitacion: Habitacion = {
-    id: 0,
-    nombre: "",
-    estado: "",
-    tipo: "",
-    precio: 0,
-    descripcion: "",
-    detalleReservas: []
+  
+
+  crearHabitacion(inputNombre: string, inputEstado: string, inputTipo: string, inputPrecio: number, inputDescripcion: string){
+    const nuevoHabitacion: Habitacion = {
+      id: 0,
+      nombre: inputNombre,
+      estado: inputEstado,
+      tipo: inputTipo,
+      precio: inputPrecio,
+      descripcion: inputDescripcion,
+      detalleReservas: []
+    };
+    this.habitacionService.agregarHabitacion(nuevoHabitacion);
+
   }
 
 }

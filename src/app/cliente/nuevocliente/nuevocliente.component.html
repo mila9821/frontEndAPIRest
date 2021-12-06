@@ -1,31 +1,31 @@
 <h3>Nuevo Cliente</h3>
 <div class="mb-3">
     <label for="NombreInput" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="NombreInput" placeholder="Nombre" [value]="nuevoCliente.nombre">
+    <input type="text" class="form-control" id="NombreInput" placeholder="Nombre" #inputNombre>
   </div>
 <div class="mb-3">
     <label for="ModoInput" class="form-label">Modo</label>
-    <input type="text" class="form-control" id="ModoInput" [value]="nuevoCliente.modo">
+    <input type="text" class="form-control" id="ModoInput" #inputModo>
   </div>
 <div class="mb-3">
     <label for="TelefonoInput" class="form-label">Telefono</label>
-    <input type="text" class="form-control" id="TelefonoInput" [value]="nuevoCliente.telefono">
+    <input type="text" class="form-control" id="TelefonoInput" #inputTelefono>
   </div>
 <div class="mb-3">
     <label for="EmailInput" class="form-label">Email</label>
-    <input type="email" class="form-control" id="EmailInput" [value]="nuevoCliente.email">
+    <input type="email" class="form-control" id="EmailInput" #inputEmail>
   </div>
 <div class="mb-3">
     <label for="PaisInput" class="form-label">Pais</label>
-    <input type="text" class="form-control" id="PaisInput" [value]="nuevoCliente.pais">
+    <input type="text" class="form-control" id="PaisInput" #inputPais>
   </div>
 <div class="mb-3">
     <label for="DNIInput" class="form-label">DNI</label>
-    <input type="text" class="form-control" id="DNIInput" [value]="nuevoCliente.dni">
+    <input type="text" class="form-control" id="DNIInput" #inputDni>
   </div>
   <div class="mb-3">
     <label for="FotoInput" class="form-label">Foto</label>
-    <input type="hidden" class="form-control" id="FotoInput" [value]="nuevoCliente.foto">
+    <input type="hidden" value="foto" class="form-control" id="FotoInput" #inputfoto>
   </div>
   <hr>
-  <a href="cliente" class="btn btn-warning btn-lg" tabindex="-1" role="button" >Aceptar</a>
+  <a href="cliente" class="btn btn-warning btn-lg" tabindex="-1" role="button" (click)="crearCliente(inputNombre.value, inputModo.value, inputTelefono.value, inputEmail.value, inputPais.value, inputDni.value, inputfoto.value)">Aceptar</a>

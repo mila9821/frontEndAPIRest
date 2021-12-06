@@ -17,4 +17,8 @@ export class RestauranteService {
       this.lista = resp
     })
   }
+
+  agregarRestaurante(restaurante: Restaurante){
+    this.http.post<any>('http://127.0.0.1:8080/api/restaurante', restaurante).subscribe();
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Reserva } from '../../Interfaces/reserva,interface';
+import { ReservaService } from '../reserva.service';
 
 @Component({
   selector: 'app-nuevoreserva',
@@ -8,20 +9,25 @@ import { Reserva } from '../../Interfaces/reserva,interface';
 })
 export class NuevoreservaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private reservaService: ReservaService) { }
 
   ngOnInit(): void {
   }
 
-  public nuevoReserva: Reserva = {
-    id: 0,
-    ingreso: new Date(""),
-    salida: new Date(""),
-    precio: 0,
-    adelanto: 0,
-    dias: 0,
-    restaurantes: [],
-    detalleReservas: []
+  
+
+  crearReserva(inputIngreso: Date, inputSalida: Date, inputPrecio: number, inputAdelanto: number, inputDias: number){
+    const nuevoReserva: Reserva = {
+      id: 0,
+      ingreso: inputIngreso,
+      salida: new Date(inputSalida),
+      precio: inputPrecio,
+      adelanto: inputAdelanto,
+      dias: inputDias,
+      restaurantes: [],
+      detalleReservas: []
+    };
+    this.reservaService.agregarReserva(nuevoReserva);
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Testimonio } from '../../Interfaces/testimonio.interface';
+import { TestimonioService } from '../testimonio.service';
 
 @Component({
   selector: 'app-nuevotestimonio',
@@ -8,16 +9,18 @@ import { Testimonio } from '../../Interfaces/testimonio.interface';
 })
 export class NuevotestimonioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testimonioService: TestimonioService) { }
 
   ngOnInit(): void {
   }
 
-  public nuevoTestimonio: Testimonio = {
-    id: 0,
-    contenido: "",
-    estado: 0
 
+  crearTestimonio(inputContenido: string, inputEstado: number){
+    const nuevoTestimonio: Testimonio = {
+      id: 0,
+      contenido: inputContenido,
+      estado: inputEstado
   }
-
+  this.testimonioService.agregarTestimonio(nuevoTestimonio);
+  }
 }

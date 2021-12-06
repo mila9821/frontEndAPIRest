@@ -17,4 +17,8 @@ export class ClienteService {
       this.lista = resp
     });
   }
+
+  agregarCliente(cliente:Cliente) {
+    this.http.post<any>('http://127.0.0.1:8080/api/clientes', cliente).subscribe();
+  }
 }

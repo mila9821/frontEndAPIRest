@@ -1,16 +1,16 @@
 <h3>Nuevo Plato</h3>
 <div class="mb-3">
     <label for="NombreInput" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="NombreInput" [value]="nuevoRestaurante.nomPlato">
+    <input type="text" class="form-control" id="NombreInput" #inputNombre>
   </div>
 <div class="mb-3">
     <label for="PrecioInput" class="form-label">Precio</label>
-    <input type="text" class="form-control" id="PrecioInput" [value]="nuevoRestaurante.precioPlato">
+    <input type="number" class="form-control" id="PrecioInput" #inputPrecio>
   </div>
 <div class="mb-3">
     <label for="FotoInput" class="form-label">Foto</label>
-    <input type="hidden" class="form-control" id="FotoInput" [value]="nuevoRestaurante.foto">
+    <input type="hidden" value="foto" class="form-control" id="FotoInput" #inputFoto>
     </div>
     <hr>
-  <a href="restaurante" class="btn btn-warning btn-lg" tabindex="-1" role="button" >Aceptar</a>
+  <a href="restaurante" class="btn btn-warning btn-lg" tabindex="-1" role="button" (click)="crearPlato(inputNombre.value, inputPrecio.valueAsNumber, inputFoto.value)">Aceptar</a>
 

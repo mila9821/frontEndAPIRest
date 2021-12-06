@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../../Interfaces/cliente.interface';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-nuevocliente',
@@ -8,22 +9,26 @@ import { Cliente } from '../../Interfaces/cliente.interface';
 })
 export class NuevoclienteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
   }
 
-  public nuevoCliente: Cliente = {
-    id: 0,
-    nombre: "",
-    modo: "",
-    telefono: "",
-    email: "",
-    pais: "",
-    dni: "",
-    foto: "",
-    testimonios: [],
-    detalleReservas: []
+
+  crearCliente(inputNombre: string, inputModo: string, inputTelefono: string, inputEmail: string, inputPais: string, inputDni: string, inputFoto: string){
+    const nuevoCliente: Cliente = {
+      id: 0,
+      nombre: inputNombre,
+      modo: inputModo,
+      telefono: inputTelefono,
+      email: inputEmail,
+      pais: inputPais,
+      dni: inputDni,
+      foto: inputFoto,
+      testimonios: [],
+      detalleReservas: []
+    };
+    this.clienteService.agregarCliente(nuevoCliente);
   }
 
 }

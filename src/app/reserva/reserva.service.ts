@@ -18,4 +18,8 @@ export class ReservaService {
       this.lista = resp
     });
   }
+
+  agregarReserva(reserva: Reserva){
+    this.http.post<any>('http://127.0.0.1:8080/api/detalle', reserva).subscribe();
+  }
 }
