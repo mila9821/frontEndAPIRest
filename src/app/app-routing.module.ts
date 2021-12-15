@@ -80,7 +80,7 @@ const routes: Routes = [
     path: 'testimonio/nuevo',
     component: NuevotestimonioComponent,
     pathMatch: 'full'
-  }
+  },
 
 ];
 
